@@ -1,0 +1,11 @@
+.header {
+    width: 100%;
+    position: relative;
+}
+
+.header-scroll {
+    width:100%;
+    background: red;
+    position: fixed;
+    top: 0;
+}
