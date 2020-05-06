@@ -4,22 +4,32 @@ class PostDetails extends Component {
   state = {
     postDetail: {},
     isLoading: false,
+    isError: false,
   };
 
   componentDidMount() {
+    this.setState({isLoading: true});
     fetch('https://jsonplaceholder.typicode.com/posts/1')
       .then(response => response.json())
-      .then(data => this.setState({
-        postDetail: data,
-      }))
-      .catch();
+      .then(data => setTimeout(() => {
+        this.setState({
+          postDetail: data,
+          isLoading: false,
+        })
+      }, 4000))
   }
 
+
   render() {
+    const { isLoading, postDetail: { title, body }} = this.state;
     return (
       <div>
-        <h2>{this.state.postDetail.title}</h2>
-        <p>{this.state.postDetail.body}</p>
+        {isLoading && <div>Ładowanie danych...</div>}
+        {!isLoading && <>
+          <h2>{title}</h2>
+          <p>{body}</p>
+        </>}
+
       </div>
     )
   }
