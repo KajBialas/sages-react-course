@@ -9,7 +9,7 @@ class PostDetails extends Component {
 
   componentDidMount() {
     this.setState({isLoading: true});
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    fetch(`https://jsonplaceholder.typicode.com/posts/${this.props.postId}`)
       .then(response => response.json())
       .then(data => setTimeout(() => {
         this.setState({

@@ -17,7 +17,7 @@ function Home() {
   return (
     <div className="App" on>
       <Header />
-      <PostDetails />
+      <PostDetails postId={1}/>
       <Form />
       <PostList />
       <Counter />
