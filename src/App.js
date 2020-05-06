@@ -1,8 +1,9 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import TextSection from './TextSection';
-import Counter from './Counter';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import TextSection from './components/TextSection';
+import Counter from './components/Counter';
+import PostDetails from './components/PostDetails';
 
 const TEXTS = {
   footer: {
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <PostDetails />
       <Counter />
       <TextSection />
       <Footer text={TEXTS.footer.text}/>
