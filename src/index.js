@@ -6,11 +6,13 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Page404 from './pages/404';
 import Footer from './components/Footer';
+import Menu from './components/Menu';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
+    <Menu />
     <Switch>
       <Redirect from="/home" to="/" />
       <Route exact path="/" component={Home} />
