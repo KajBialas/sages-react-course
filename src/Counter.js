@@ -6,11 +6,20 @@ class Counter extends Component {
     counter: 0,
   };
 
+  componentDidMount() {
+    console.log('DID MOUNT');
+  }
+
+  componentDidUpdate() {
+    console.log('DID UPDATE');
+  }
+
   incrementCounter = () => this.setState({counter: this.state.counter + 1});
   decrementCounter = () => this.setState({ counter: this.state.counter - 1});
   resetCounter = () => this.setState({counter: 0});
 
   render() {
+    console.log('RENDER');
     return (
       <div>
         Counter: {this.state.counter}
