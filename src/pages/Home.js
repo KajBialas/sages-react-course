@@ -22,7 +22,6 @@ function Home() {
       <PostList />
       <Counter />
       <TextSection />
-      <Footer text={TEXTS.footer.text}/>
     </div>
   );
 }
