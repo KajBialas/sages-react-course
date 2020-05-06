@@ -3,26 +3,50 @@ import React, { Component } from 'react';
 class Form extends Component {
   state = {
     inputTextValue: '',
+    inputNameValue: '',
+    comments: [],
   };
 
-  handleChange = (event) => this.setState({inputTextValue: event.target.value});
+  handleChange = (event) => this.setState({[event.target.name]: event.target.value});
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log('FORM SUBMIT', this.state.inputTextValue);
     this.setState({
+      comments: [
+        ...this.state.comments,
+        {
+          id: this.state.comments.length + 1,
+          name: this.state.inputNameValue,
+          text: this.state.inputTextValue,
+        }
+      ],
       inputTextValue: '',
+      inputNameValue: '',
     })
   };
+
+  renderComments = () => this.state.comments.map((commentElement) => <div key={commentElement.key}>
+    <h3>{commentElement.name}</h3>
+    <p>{commentElement.text}</p>
+  </div>);
 
   render() {
     return(
       <div>
         <h2>Dodaj komentarz:</h2>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.inputTextValue} onChange={this.handleChange} />
+          <label>
+            Imię:
+            <input name="inputNameValue" type="text" value={this.state.inputNameValue} onChange={this.handleChange} />
+          </label>
+          <label>
+            Treść:
+            <input name="inputTextValue" type="text" value={this.state.inputTextValue} onChange={this.handleChange} />
+          </label>
           <button type="submit">DODAJ</button>
         </form>
+        <h2>Komentarze:</h2>
+        {this.renderComments()}
       </div>
     )
   }
