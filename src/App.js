@@ -5,6 +5,7 @@ import TextSection from './components/TextSection';
 import Counter from './components/Counter';
 import PostDetails from './components/PostDetails';
 import PostList from './components/PostList';
+import Form from './components/Form';
 
 const TEXTS = {
   footer: {
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <Header />
       <PostDetails />
+      <Form />
       <PostList />
       <Counter />
       <TextSection />
