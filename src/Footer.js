@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Footer() {
+const text = "Copyright 2020";
+
+function Footer(props) {
   return(
-    <footer>Copyright 2020</footer>
+    <footer>{props.text}</footer>
   )
 }
 
