@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Page404 from './pages/404';
+import Post from './pages/Post';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
 
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Redirect from="/home" to="/" />
       <Route exact path="/" component={Home} />
       <Route path="/contact" component={Contact} />
+      <Route path="/post/:id" component={Post} />
       <Route component={Page404} />
     </Switch>
     <Footer text="Copyright 20020" />
