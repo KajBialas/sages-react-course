@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TextSection from '../components/TextSection';
-import Counter from '../components/Counter';
+import CounterComponent from '../components/counter/Counter';
 import PostDetailsContainer from '../components/postDetails/PostDetails.container';
 import PostListContainer from '../components/postList/PostList.container';
 import Form from '../components/Form';
@@ -20,7 +20,7 @@ function Home() {
       <PostDetailsContainer />
       <Form />
       <PostListContainer />
-      <Counter />
+      <CounterComponent />
       <TextSection />
     </div>
   );

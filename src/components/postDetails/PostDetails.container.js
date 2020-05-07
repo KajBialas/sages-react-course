@@ -3,20 +3,30 @@ import PostDetailsComponent from './PostDetails.component';
 import PropTypes from 'prop-types';
 
 function PostDetailsContainer({postId}) {
-  const [postDetails, setPostDetails] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [postDetails, setPostDetails] = useState({
+    isLoading: false,
+    data: {},
+  });
+
 
   useEffect(() => {
-    setIsLoading(true);
+    setPostDetails({
+      ...postDetails,
+      isLoading: true,
+    });
+
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
       .then(response => response.json())
       .then(data => setTimeout(() => {
-        setPostDetails(data);
-        setIsLoading(false);
+        setPostDetails({
+          isLoading: false,
+          data,
+        });
+
       }, 4000))
   }, []);
 
-  const { title, body } = postDetails;
+  const { data: {title, body,}, isLoading } = postDetails;
 
   return <PostDetailsComponent isLoading={isLoading} title={title} body={body} />
 }
