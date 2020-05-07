@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import PostDetailsComponent from './PostDetails.component';
+import PropTypes from 'prop-types';
 
 class PostDetailsContainer extends Component {
   static defaultProps = {
-    postId: 5,
+    postId: '5',
+  };
+
+  static propTypes = {
+    postId: PropTypes.string.isRequired,
   };
 
   state = {

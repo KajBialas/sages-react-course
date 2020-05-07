@@ -15,7 +15,7 @@ const TEXTS = {
 
 function Home() {
   return (
-    <div className="App" on>
+    <div className="App">
       <Header />
       <PostDetailsContainer />
       <Form />
