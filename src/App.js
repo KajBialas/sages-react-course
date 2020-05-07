@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react';
+import React, { useState, useReducer } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -13,10 +13,22 @@ export const CounterContext = React.createContext(1);
 
 function App() {
   const [state, dispatch] = useReducer(counterReducer, COUNTER_INITIAL_STATE);
+  const [userName, setUserName] = useState('');
+
+  const [userNameForm, setUserNameForm] = useState('');
 
   return(
     <CounterContext.Provider value={[state, dispatch]}>
       <BrowserRouter>
+
+        <div>
+          <h2>Logowanie</h2>
+          { userName ? <div>Użytkownik zalogowany</div> : <form onSubmit={() => setUserName(userNameForm)}>
+            <input type="text" value={userNameForm} onChange={(e) => setUserNameForm(e.target.value)} />
+          </form> }
+        </div>
+
+
         <Menu />
         <Switch>
           <Redirect from="/home" to="/" />
