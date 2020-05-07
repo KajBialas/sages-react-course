@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useReducer} from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -7,15 +7,15 @@ import Post from './pages/Post';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
 
-// import { COUNTER_INITIAL_STATE, COUNTER_ACTION_TYPES, counterReducer} from './Counter.reducer';
+import { COUNTER_INITIAL_STATE, counterReducer} from './components/counter/Counter.reducer';
 
 export const CounterContext = React.createContext(1);
 
 function App() {
-  const [ countContext, setCountContext] = useState(0);
+  const [state, dispatch] = useReducer(counterReducer, COUNTER_INITIAL_STATE);
 
   return(
-    <CounterContext.Provider value={[countContext, setCountContext]}>
+    <CounterContext.Provider value={[state, dispatch]}>
       <BrowserRouter>
         <Menu />
         <Switch>
