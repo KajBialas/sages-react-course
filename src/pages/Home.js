@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TextSection from '../components/TextSection';
-import CounterComponent from '../components/counter/Counter';
+import CounterComponent from '../components/counter/Counter.component';
 import PostDetailsContainer from '../components/postDetails/PostDetails.container';
 import PostListContainer from '../components/postList/PostList.container';
 import Form from '../components/Form';
