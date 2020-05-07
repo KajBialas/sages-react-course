@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PostDetailsComponent from './PostDetails.component';
 
 class PostDetailsContainer extends Component {
+  static defaultProps = {
+    postId: 5,
+  };
+
   state = {
     postDetail: {},
     isLoading: false,

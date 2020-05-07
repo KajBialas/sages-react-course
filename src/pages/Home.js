@@ -17,7 +17,7 @@ function Home() {
   return (
     <div className="App" on>
       <Header />
-      <PostDetailsContainer postId={1}/>
+      <PostDetailsContainer />
       <Form />
       <PostListContainer />
       <Counter />
