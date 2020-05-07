@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PostDetailsComponent from './PostDetails.component';
 
-class PostDetails extends Component {
+class PostDetailsContainer extends Component {
   state = {
     postDetail: {},
     isLoading: false,
@@ -23,16 +24,9 @@ class PostDetails extends Component {
   render() {
     const { isLoading, postDetail: { title, body }} = this.state;
     return (
-      <div>
-        {isLoading && <div>Ładowanie danych...</div>}
-        {!isLoading && <>
-          <h2>{title}</h2>
-          <p>{body}</p>
-        </>}
-
-      </div>
+      <PostDetailsComponent isLoading={isLoading} title={title} body={body} />
     )
   }
 }
 
-export default PostDetails;
+export default PostDetailsContainer;

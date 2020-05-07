@@ -3,8 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TextSection from '../components/TextSection';
 import Counter from '../components/Counter';
-import PostDetails from '../components/PostDetails';
-import PostList from '../components/PostList';
+import PostDetailsContainer from '../components/postDetails/PostDetails.container';
+import PostListContainer from '../components/postList/PostList.container';
 import Form from '../components/Form';
 
 const TEXTS = {
@@ -17,9 +17,9 @@ function Home() {
   return (
     <div className="App" on>
       <Header />
-      <PostDetails postId={1}/>
+      <PostDetailsContainer postId={1}/>
       <Form />
-      <PostList />
+      <PostListContainer />
       <Counter />
       <TextSection />
     </div>

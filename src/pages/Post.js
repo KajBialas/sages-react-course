@@ -1,10 +1,10 @@
 import React from 'react';
-import PostDetails from '../components/PostDetails';
+import PostDetailsContainer from '../components/postDetails/PostDetails.container';
 
 function Post(props) {
   return(
     <div>
-      <PostDetails postId={props.match.params.id} />
+      <PostDetailsContainer postId={props.match.params.id} />
     </div>
   )
 }

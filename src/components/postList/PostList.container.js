@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PostListComponent from './PostList.component';
 
-class PostList extends Component {
+class PostListContainer extends Component {
   state = {
     postList: [],
     isLoading: false,
@@ -20,23 +21,12 @@ class PostList extends Component {
       }, 4000))
   }
 
-  renderPostList = () => this.state.postList.map((postElement) => (
-    <Link key={postElement.id} to={`/post/${postElement.id}`}>
-      {postElement.title}
-    </Link>
-  ));
-
-
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, postList } = this.state;
     return (
-      <div>
-        <h2>Inne posty:</h2>
-        {isLoading && <div>Ładowanie danych...</div>}
-        {!isLoading && this.renderPostList()}
-      </div>
+      <PostListComponent isLoading={isLoading} postList={postList} />
     )
   }
 }
 
-export default PostList;
+export default PostListContainer;
