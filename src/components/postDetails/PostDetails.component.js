@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function PostDetailsComponent({ isLoading, title, body }) {
+function PostDetailsComponent({ isLoading, isError, title, body }) {
   const renderLoader = () => (
     <div>Ładowanie...</div>
   );
@@ -13,7 +13,15 @@ function PostDetailsComponent({ isLoading, title, body }) {
     </div>
   );
 
-  return isLoading ? renderLoader() : renderContent();
+  const renderError = () => (
+    <div>Błąd ładowania danych</div>
+  );
+
+  if(isLoading)
+    return renderLoader();
+  else if(isError)
+    return renderError();
+  else return renderContent();
 }
 
 PostDetailsComponent.propTypes = {

@@ -10,23 +10,22 @@ import {
 function PostDetailsContainer({postId}) {
   const [ postDetailsState, dispatch ] = useReducer(postDetailsReducer, POST_DETAILS_INITIAL_STATE);
 
-  const [ counter, setCounter ] = useState(0);
-
-
   useEffect(() => {
     dispatch({type: POST_DETAILS_ACTION_TYPES.SET_LOADING});
 
-    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+    fetch(`https://jsonplaceholder.typicosts/${postId}`)
       .then(response => response.json())
       .then(data => setTimeout(() => {
         dispatch({type: POST_DETAILS_ACTION_TYPES.SET_DATA, value: data});
-
       }, 4000))
+      .catch(() => {
+        dispatch({type: POST_DETAILS_ACTION_TYPES.SET_ERROR});
+      });
   }, []);
 
-  const { data: {title, body,}, isLoading } = postDetailsState;
+  const { data: {title, body,}, isLoading, isError } = postDetailsState;
 
-  return <PostDetailsComponent isLoading={isLoading} title={title} body={body} />
+  return <PostDetailsComponent isLoading={isLoading} isError={isError} title={title} body={body} />
 }
 
 PostDetailsContainer.defaultProps = {
