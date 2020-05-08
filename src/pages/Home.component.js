@@ -8,6 +8,8 @@ import {
   ACTION_COUNTER_CHANGE,
 } from '../modules/counter/counter.action';
 
+import {selectCounterValue } from '../modules/counter/counter.selector';
+
 function HomeComponent({count, actionIncrement, actionDecrement, actionReset, actionChange}) {
   const handleChange = (event) => {
     actionChange(Number(event.target.value));
@@ -28,7 +30,7 @@ function HomeComponent({count, actionIncrement, actionDecrement, actionReset, ac
 
 const mapStateToProps = state => {
   return {
-    count: state.counter.countValue,
+    count: selectCounterValue(state),
   }
 };
 
