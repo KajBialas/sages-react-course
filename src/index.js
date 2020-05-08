@@ -12,7 +12,18 @@ import Menu from './components/Menu.component';
 
 const INITIAL_STATE = {
   count: 0,
-  todo: ['Example Todo 1', 'Example Todo 2'],
+  todo: [
+    {
+      name: 'Example Todo 1',
+      completed: false,
+      id: 1,
+    },
+    {
+      name: 'Example Todo 2',
+      completed: false,
+      id: 2,
+    },
+  ],
 };
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -26,7 +37,17 @@ const reducer = (state = INITIAL_STATE, action) => {
     case 'CHANGE':
       return state = {...state, count: action.counterValue};
     case 'ADD_TODO':
-      return state = {...state, todo: [...state.todo, action.todoValue]};
+      return state = {...state, todo: [
+        ...state.todo,
+          {
+            name: action.todoValue,
+            completed: false,
+            id: state.todo.length + 1,
+          }
+        ]};
+    case 'MARK_TODO':
+      console.log(action.TodoId);
+      return state;
     default:
       return state;
   }
