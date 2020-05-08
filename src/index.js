@@ -2,11 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
 import * as serviceWorker from './serviceWorker';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const reducer = (state = {count: 0}, action) => {
+  switch(action.type) {
+    case 'INCREMENT':
+      return state = {count: state.count + 1};
+    default:
+      return state;
+  }
+};
+
+const store = createStore(reducer);
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 
