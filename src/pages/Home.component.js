@@ -1,6 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import TodoList from '../components/TodoList.component';
+import {
+  ACTION_COUNTER_INCREMENT,
+  ACTION_COUNTER_DECREMENT,
+  ACTION_COUNTER_RESET,
+  ACTION_COUNTER_CHANGE,
+} from '../modules/counter/counter.action';
 
 function HomeComponent({count, actionIncrement, actionDecrement, actionReset, actionChange}) {
   const handleChange = (event) => {
@@ -28,10 +34,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    actionIncrement: () => dispatch({type: 'INCREMENT'}),
-    actionDecrement: () => dispatch({type: 'DECREMENT'}),
-    actionReset: () => dispatch({type: 'RESET'}),
-    actionChange: (value) => dispatch({type: 'CHANGE', counterValue: value})
+    actionIncrement: () => dispatch(ACTION_COUNTER_INCREMENT),
+    actionDecrement: () => dispatch(ACTION_COUNTER_DECREMENT),
+    actionReset: () => dispatch(ACTION_COUNTER_RESET),
+    actionChange: (value) => dispatch(ACTION_COUNTER_CHANGE(value))
   }
 };
 
