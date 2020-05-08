@@ -22,7 +22,7 @@ function HomeComponent({count, actionIncrement, actionDecrement, actionReset, ac
 
 const mapStateToProps = state => {
   return {
-    count: state.count,
+    count: state.counter.countValue,
   }
 };
 
