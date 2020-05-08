@@ -1,23 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function TodoListComponent({todoList, actionMarkTodo}) {
-  const renderTodos = () => todoList.map((todoElement) =>
+function TodoListComponent({todoList, todoListCompleted, actionMarkTodo}) {
+  const renderTodos = (todoList) => todoList.map((todoElement) =>
     <div key={todoElement.id} onClick={() => actionMarkTodo(todoElement.id)}>
       {todoElement.name}
     </div>
   );
   return (
     <div className="App">
-      <h2>Lista Todo:</h2>
-      {renderTodos()}
+      <h2>Lista Todo Aktywnych:</h2>
+      {renderTodos(todoList)}
+      <h2>Lista Todo Wykonanych:</h2>
+      {renderTodos(todoListCompleted)}
     </div>
   );
 }
 
 const mapStateToProps = state => {
   return {
-    todoList: state.todo,
+    todoList: state.todo.filter(element => !element.completed),
+    todoListCompleted: state.todo.filter(element => element.completed)
   }
 };
 
