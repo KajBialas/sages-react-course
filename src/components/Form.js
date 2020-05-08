@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { UserContext } from '../contexts/context';
 
 class Form extends Component {
   state = {
@@ -34,17 +35,21 @@ class Form extends Component {
     return(
       <div>
         <h2>Dodaj komentarz:</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Imię:
-            <input name="inputNameValue" type="text" value={this.state.inputNameValue} onChange={this.handleChange} />
-          </label>
-          <label>
-            Treść:
-            <input name="inputTextValue" type="text" value={this.state.inputTextValue} onChange={this.handleChange} />
-          </label>
-          <button type="submit">DODAJ</button>
-        </form>
+         <UserContext.Consumer>
+           {([userName]) =>
+             userName ? <form onSubmit={this.handleSubmit}>
+               <label>
+                 Imię:
+                 <input name="inputNameValue" type="text" value={this.state.inputNameValue} onChange={this.handleChange}/>
+               </label>
+               <label>
+                 Treść:
+                 <input name="inputTextValue" type="text" value={this.state.inputTextValue} onChange={this.handleChange}/>
+               </label>
+               <button type="submit">DODAJ</button>
+             </form> : <div>Użytkownik niezalogowany, zaloguj się!</div>
+           }
+        </UserContext.Consumer>
         <h2>Komentarze:</h2>
         {this.renderComments()}
       </div>

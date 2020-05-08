@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Button from '../Button';
-import { CounterContext } from '../../App';
+import { CounterContext } from '../../contexts/context';
 import { COUNTER_ACTION_TYPES } from './Counter.reducer';
 
 function CounterComponent() {

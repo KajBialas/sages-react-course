@@ -10,8 +10,7 @@ import UserLogin from './components/userLogin/UserLogin.component';
 
 import { COUNTER_INITIAL_STATE, counterReducer} from './components/counter/Counter.reducer';
 
-export const CounterContext = React.createContext(1);
-export const UserContext = React.createContext('');
+import {UserContext, CounterContext} from './contexts/context';
 
 function App() {
   const [state, dispatch] = useReducer(counterReducer, COUNTER_INITIAL_STATE);
