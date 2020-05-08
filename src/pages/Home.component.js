@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import TodoList from '../components/TodoList.component';
 
 function HomeComponent({count, actionIncrement, actionDecrement, actionReset, actionChange}) {
   const handleChange = (event) => {
@@ -8,6 +9,8 @@ function HomeComponent({count, actionIncrement, actionDecrement, actionReset, ac
 
   return (
     <div className="App">
+      <TodoList />
+      <hr/>
       Count: {count}
       <button onClick={actionIncrement}>+</button>
       <button onClick={actionDecrement}>-</button>

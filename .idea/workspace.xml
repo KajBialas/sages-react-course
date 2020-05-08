@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0218a084-709b-43a0-8486-80b812a6f2ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/TodoForm.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TodoList.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Todo.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.component.js" afterDir="false" />
     </list>
@@ -20,11 +24,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src" />
     </key>

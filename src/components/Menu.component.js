@@ -5,6 +5,7 @@ function Menu() {
   return (
     <nav>
       <Link to='/'>Home</Link>
+      <Link to='/todo'>Todo</Link>
       <Link to='/contact'>Contact</Link>
     </nav>
   )
