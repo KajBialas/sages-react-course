@@ -9,20 +9,27 @@ import Home from './pages/Home.component';
 import Contact from './pages/Contact.component';
 import Menu from './components/Menu.component';
 
-const reducer = (state = {count: 0}, action) => {
+const INITIAL_STATE = {
+  count: 0,
+  todo: [],
+};
+
+const reducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case 'INCREMENT':
-      return state = {count: state.count + 1};
+      return state = {...state, count: state.count + 1};
     case 'DECREMENT':
-      return state = {count: state.count - 1};
+      return state = {...state, count: state.count - 1};
     case 'RESET':
-      return state = {count: 0};
+      return state = {...state,count: 0};
+    case 'CHANGE':
+      return state = {...state, count: action.counterValue};
     default:
       return state;
   }
 };
 
-const store = createStore(reducer);
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>
