@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home.component';
+import Contact from './pages/Contact.component';
+import Menu from './components/Menu.component';
 
 const reducer = (state = {count: 0}, action) => {
   switch(action.type) {
     case 'INCREMENT':
       return state = {count: state.count + 1};
+    case 'DECREMENT':
+      return state = {count: state.count - 1};
+    case 'RESET':
+      return state = {count: 0};
     default:
       return state;
   }
@@ -19,7 +26,13 @@ const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <Menu />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/contact' component={Contact} />
+      </Switch>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );

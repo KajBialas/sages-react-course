@@ -2,42 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0218a084-709b-43a0-8486-80b812a6f2ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Menu.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Contact.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/counter/Counter.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/counter/Counter.reducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postDetails/PostDetails.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postDetails/PostDetails.container.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postDetails/PostDetails.reducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postList/PostList.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/postList/PostList.container.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/userLogin/UserLogin.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/context.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,10 +33,10 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/components/counter" />
       <recent name="$PROJECT_DIR$/src/components/postList" />
       <recent name="$PROJECT_DIR$/src/components/postDetails" />
-      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
